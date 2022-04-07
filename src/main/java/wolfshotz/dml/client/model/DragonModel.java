@@ -15,7 +15,7 @@ public class DragonModel extends EntityModel<TameableDragonEntity>
     // model constants
     public static final int NECK_SIZE = 10;
     public static final int TAIL_SIZE = 10;
-    public static final int VERTS_NECK = 7;
+    public static final int VERTS_NECK = 5;
     public static final int VERTS_TAIL = 12;
     public static final int HEAD_OFS = -16;
 

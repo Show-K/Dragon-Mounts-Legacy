@@ -265,7 +265,7 @@ public class DragonAnimator
     {
         model.neck.rotationPointX = 0;
         model.neck.rotationPointY = 14;
-        model.neck.rotationPointZ = -8;
+        model.neck.rotationPointZ = -13;
 
         model.neck.rotateAngleX = 0;
         model.neck.rotateAngleY = 0;
@@ -293,13 +293,6 @@ public class DragonAnimator
             model.neck.rotateAngleX -= MathX.terpLinear(0, ofsRotX, ground * health);
             // use looking yaw
             model.neck.rotateAngleY = MathX.toRadians(lookYaw) * vertMulti * speed;
-
-            // update scale
-            model.neck.renderScaleX = model.neck.renderScaleY = MathX.terpLinear(1.6f, 1, vertMulti);
-            model.neck.renderScaleZ = 0.6f;
-
-            // hide the first and every second scale
-            model.neckScale.showModel = i % 2 == 0;
 
             // update proxy
             model.neckProxy[i].update();
@@ -420,7 +413,7 @@ public class DragonAnimator
     {
         model.tail.rotationPointX = 0;
         model.tail.rotationPointY = 16;
-        model.tail.rotationPointZ = 62;
+        model.tail.rotationPointZ = 61;
 
         model.tail.rotateAngleX = 0;
         model.tail.rotateAngleY = 0;
@@ -472,10 +465,6 @@ public class DragonAnimator
                 boolean horn = i > model.tailProxy.length - 7 && i < model.tailProxy.length - 3;
                 model.tailHornLeft.showModel = model.tailHornRight.showModel = horn;
             }
-
-            // update scale
-            float neckScale = MathX.terpLinear(1.5f, 0.3f, vertMulti);
-            model.tail.setRenderScale(neckScale);
 
             // update proxy
             model.tailProxy[i].update();
